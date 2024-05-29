@@ -1,16 +1,9 @@
 body {
-    background-image :url(img/háttér\ \(2\).jpg); 
+    background-image :url(img/háttér.jpg); 
     background-repeat: no-repeat;
     background-size:cover;
 
-  
-   
     margin: 0%;
-   
-
-
-
-   
 }
 
 
@@ -61,3 +54,23 @@ ul.topnav {
   }
 
  
+  #adat {
+    max-height: 88vh; /* Maximum magasság a viewport magasság 80%-a */
+    overflow-y: auto; /* Görgetősáv megjelenítése, ha a tartalom túl nagy */
+  }
+  /* Görgetősáv átlátszóvá tétele */
+::-webkit-scrollbar {
+  width: 12px; /* A görgetősáv szélessége */
+  background-color: transparent; /* A görgetősáv háttérszíne átlátszó */
+}
+
+/* A görgetősáv csúszka átlátszóvá tétele */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5); /* A görgetősáv csúszka színe átlátszó fekete (50%-os átlátszóság) */
+  border-radius: 6px; /* A görgetősáv csúszka kerekítése */
+}
+
+/* A görgetősáv csúszka átlátszóvá tétele aktív állapotban */
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* A görgetősáv csúszka színe aktív állapotban (80%-os átlátszóság) */
+}
