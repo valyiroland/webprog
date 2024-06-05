@@ -19,6 +19,7 @@ document.getElementById("gomb").onclick = function() {
       .then(function(valasz){
         return valasz.json();
       })
-
+       
+      alert('Az új szállás sikeresen létrehozva!');
     }
   

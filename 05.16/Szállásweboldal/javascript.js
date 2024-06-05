@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p class="card-text" style="color: color-mix(in srgb, cyan 50%, aquamarine 50%); font-size: 16px;">Ára: ${adat.price}.</p>
                 <p class="card-text" style="color: color-mix(in srgb, cyan 50%, aquamarine 50%); font-size: 16px;">Legalább: ${adat.minimum_nights}.</p>
                 <button class="btn btn-danger btn-sm" onclick="deleteSzallas(${adat.id})">Törlés</button>
-                <button class="btn btn-primary btn-sm" onclick="modifySzallas(${adat.id})">Módosítás</button>
               </div>
             </div>
           `;
@@ -45,6 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log(data); 
       fetchSzallasok(); 
     });
+    alert('A szállás sikeresen törölve!');
+    location.reload();
   }
 
   
