@@ -18,12 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p class="card-text" style="color: color-mix(in srgb, cyan 50%, aquamarine 50%); font-size: 16px;">Elhelyezkedése: ${adat.location}.</p>
                 <p class="card-text" style="color: color-mix(in srgb, cyan 50%, aquamarine 50%); font-size: 16px;">Ára: ${adat.price}.</p>
                 <p class="card-text" style="color: color-mix(in srgb, cyan 50%, aquamarine 50%); font-size: 16px;">Legalább: ${adat.minimum_nights}.</p>
+                <button class="btn btn-danger btn-sm" onclick="deleteSzallas(${adat.id})">Törlés</button>
+                <button class="btn btn-primary btn-sm" onclick="modifySzallas(${adat.id})">Módosítás</button>
               </div>
             </div>
           `;
           const card = colDiv.querySelector('.card');
           card.classList.remove('bg-primary', 'bg-secondary', 'bg-success', 'bg-danger', 'bg-warning', 'bg-info', 'bg-light', 'bg-dark');
-          card.style.backgroundColor = 'burlywood'; // Háttérszín beállítása átlátszóra
+          card.style.backgroundColor = 'burlywood'; 
           
         
           adatDiv.appendChild(colDiv);
@@ -34,4 +36,16 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById("adat").innerHTML = '<p>Hiba történt az adatok lekérésekor.</p>';
       });
   });
+  function deleteSzallas(id) {
+    fetch(`https://nodejs.sulla.hu/data/${id}`, {
+      method: 'DELETE'
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data); 
+      fetchSzallasok(); 
+    });
+  }
+
   
+    

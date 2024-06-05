@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RELAXMOMENTS</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+      <ul class="topnav">
+        <li><a class="active" href="#home">Új szállás létrehozás</a></li>
+        <li><a href="főoldal.html">Főoldal</a></li>
+        <li><a href="szallasok.html">Szállásaink</a></li>
+        
+      </ul>
+    </header>
+    <div class="nev">
+      <h1>RelaxMoments</h1>
+      <h3>"Relax, Recharge, and Rediscover"</h3>
+    </div>
+    <div class="form-container">
+        <div class="form-group">
+          <label for="name">Név:</label>
+          <input type="text" name="name" id="name">
+        </div>
+        <div class="form-group">
+          <label for="hostname">Szolgáltató:</label>
+          <input type="text" name="hostname" id="hostname">
+        </div>
+        <div class="form-group">
+          <label for="location">Elhelyezkedése:</label>
+          <input type="text" name="location" id="location">
+        </div>
+        <div class="form-group">
+          <label for="price">Ára:</label>
+          <input type="number" name="price" id="price">
+        </div>
+        <div class="form-group">
+          <label for="minimum_nights">Minimum mennyi éjszaka:</label>
+          <input type="number" name="minimum_nights" id="minimum_nights">
+        </div>
+        <button id="gomb">POST</button>
+        <div id="adat"></div>
+    <script src="ujsz.js"></script>
+</body>
+</html>

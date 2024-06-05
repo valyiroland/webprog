@@ -2,8 +2,9 @@ body {
     background-image :url(img/háttér\ \(2\).jpg); 
     background-repeat: no-repeat;
     background-size:cover;
-
-  
+    justify-content: center;
+    align-items: center;
+    display:flexbox;
    
     margin: 0%;
    
@@ -60,4 +61,39 @@ ul.topnav {
 
   }
 
- 
+  .form-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 4rem;
+    background-color:burlywood;
+    border-radius: 10px;
+    margin: auto;
+  }
+  .form-group {
+    margin-bottom: 1.8rem;
+  }
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: color-mix(in srgb, cyan 50%, aquamarine 50%); 
+  }
+  input {
+    width: 100%;
+    padding: 0.85rem;
+    border-radius: 0.8rem;
+    border: none;
+    font-size: 1.1rem;
+  }
+  button {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #61dafb;
+    color: #282c34;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #21a1f1;
+  }
